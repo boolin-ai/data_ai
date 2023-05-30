@@ -18,6 +18,10 @@
         <div>
             <input class="form-control w-100" name="name" required>
         </div>
+        <p class="mt-3">月</p>
+        <div>
+            <input class="form-control w-100" name="month" required>
+        </div>
         <p class="mt-3">売上</p>
         <div>
             <input class="form-control w-100" name="vol" required>
@@ -77,11 +81,12 @@
             $('form').submit(function () {
                 const group  = $('input[name="group"]').val();
                 const name = $('input[name="name"]').val();
+                const month = $('input[name="month"]').val();
                 const vol  = $('input[name="vol"]').val();
                 const payvol  = $('input[name="payvol"]').val();
                 const active = $('input[name="active"]').val();
                 const newmem = $('input[name="newmem"]').val();
-                const msg = `${group}\n${name}\n${vol}\n${payvol}\n${active}\n${newmem}`;
+                const msg = `${group}\n${name}\n${month}\n${vol}\n${payvol}\n${active}\n${newmem}`;
                 sendText(msg);
                 return false;
             });
